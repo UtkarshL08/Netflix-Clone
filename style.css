@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Mukta:wght@200;300;400;500;600;700;800&family=Playwrite+DK+Loopet:wght@100..400&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 100px;
+    align-items: center;
+    padding: 30px;
+
+}
+
+.bg {
+
+    background:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
+        url('../img/bg.jpg') no-repeat center center / cover;
+    /* background: rgba(0, 0, 0, 0.6) url('../img/bg.jpg') no-repeat center center / cover; */
+    height: 100vh;
+    background-blend-mode: darken;
+}
+
+.logo {
+    width: 50%;
+}
+
+.logo img {
+    display: flex;
+    justify-content: center;
+
+    width: 9.25rem;
+    height: 2.5rem;
+
+}
+
+
+
+.sign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+
+}
+
+.optBtn {
+    margin: 4px;
+
+
+}
+
+.optBtn button {
+    font-size: 16px;
+    padding: 5px 11px;
+    background-color: rgb(211, 7, 7);
+    /* color: white; */
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+    color: white;
+}
+
+
+
+.optBtn select {
+    font-size: 16px;
+    border: none;
+    padding: 3px;
+    /* border: 2px solid white; */
+    background: none;
+    color: white;
+}
+
+
+.optBtn option {
+    color: black;
+}
+
+.language img {
+    width: 16px;
+    align-items: center;
+    padding: 0 1px;
+    filter: invert(100%);
+
+}
+
+.language {
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+.para {
+    color: white;
+    text-align: center;
+    padding: 12px;
+    height: 80vh;
+    margin: 23px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bolder;
+
+
+}
+
+.para h1 {
+    font-size: 4rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.head {
+    padding: 35px 12rem;
+    display: block;
+    margin: 5px 71px;
+}
+
+
+.head p {
+    font-size: 21px;
+}
+
+.secPara p {
+    font-size: 16px;
+
+}
+
+.in {
+    padding: 13px 0;
+}
+
+.btn {
+    font-size: 21px;
+    padding: 10px 21px;
+    width: auto;
+    border-radius: 6px;
+    border: none;
+    background: rgb(211, 7, 7);
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+}
+
+.mail {
+    width: 21rem;
+    background: rgba(53, 53, 53, 0.411);
+    border: 1px solid grey;
+}
+
+.mail::placeholder {
+    float: left;
+    font-size: 18px;
+    align-items: center;
+}
+
+
+
+.line {
+    position: relative;
+    background: linear-gradient(45deg, #700b0b, rgb(187 13 13), rgb(245 65 65), #7a0707, red);
+    height: 40px;
+    border-top-left-radius: 119% 48px;
+    border-top-right-radius: 100% 30px;
+    top: -20px;
+    margin-left: 0;
+    display: flex;
+}
+
+.line::after {
+    content: '';
+    position: absolute;
+    background: blue;
+    height: 70px;
+    top: 4px;
+    width: 100%;
+    border-top-left-radius: 99% 32px;
+    border-top-right-radius: 99% 12px;
+    background: radial-gradient(ellipse at top, #0c0f3f 2%, #000 57%);
+    filter: blur(2px);
+    margin-left: 0;
+    display: flex;
+}
+
+.trend {
+    color: white;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+
+    margin: 20px 50px;
+    padding: 10px 100px;
+
+}
+
+.container {
+    overflow: hidden;
+    position: relative;
+    margin: 8px 10rem;
+
+
+
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+
+}
+
+.card {
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 15px;
+    width: 200px;
+    position: relative;
+
+}
+
+
+.card img {
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.number {
+    position: absolute;
+    bottom: 10px;
+    left: -16px;
+    font-size: 6rem;
+    /* Large font size */
+    font-weight: 900;
+    /* Extra bold */
+    color: black;
+    /* Main color */
+    font-family: "Roboto", sans-serif;
+
+    /* Text outline effect using text-shadow */
+    text-shadow:
+        -2px -2px 0 white,
+        2px -2px 0 white,
+        -2px 2px 0 white,
+        2px 2px 0 white;
+
+    z-index: 2;
+    pointer-events: none;
+}
+
+
+.arrow {
+    position: absolute;
+    top: 35%;
+    transform: translateY((-50%));
+    background-color: rgba(56, 56, 56, 0.973);
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    padding: 25px 9px;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.arrow:hover {
+    background-color: #5c5c5c;
+
+
+}
+
+.arrow.left {
+    left: 0;
+}
+
+.arrow.right {
+    right: 0;
+}
+
+.join {
+    color: white;
+    display: flex;
+    margin: 0 3rem;
+    padding: 0 2rem;
+}
+
+.head {
+    padding: 13px 25px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+
+}
+
+.offer {
+    margin: 45px;
+}
+
+.reasons {
+    background: linear-gradient(121deg, #5665d9bd, #8b28282b);
+    padding: 23px;
+    margin: 9px;
+    border-radius: 8px;
+    width: 100%;
+    position: relative;
+}
+
+.reasons h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    padding: 8px 0;
+    justify-content: center;
+}
+
+.reasons p {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    padding: 3px 0;
+}
+
+.reasons img {
+    width: 3rem;
+    float: right;
+    bottom: 55px;
+    position: relative;
+    padding: 8px;
+}
+
+
+
+.more {
+    padding-bottom: 4px;
+    height: 100%;
+}
+
+.accordions {
+    margin: 12px 48px;
+}
+
+
+
+.section {
+    margin: 11px 44px;
+    padding: 0px 46px;
+}
+
+.accordion {
+    background-color: rgb(41, 41, 41);
+    color: white;
+    width: 100%;
+    padding: 24px;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 24px;
+    font-family: "Roboto", sans-serif;
+    transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+    background-color: rgb(71, 71, 71);
+}
+
+/* with symbol */
+.accordion:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+    color: white;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: rgb(41, 41, 41);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+    color: white;
+
+}
+
+.panel p {
+    padding: 12px;
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+}
+
+.address {
+    justify-content: center;
+    color: white;
+    text-align: center;
+    margin: 34px 0;
+    padding: 34px 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.input {
+    width: 33rem;
+    background: rgba(53, 53, 53, 0.411);
+    border: 1px solid grey;
+    padding: 13px;
+}
+
+.inBtn {
+    padding: 13px 26px;
+}
+
+
+.footer {
+  padding: 40px 60px;
+  max-width: 1000px;
+  margin: auto;
+  color: rgb(153, 153, 153);
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
+.call {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.call a {
+  color: #999;
+  text-decoration: underline;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-links ul li {
+  margin: 10px 0;
+}
+
+.footer-links ul li a {
+  color: #999;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.option{
+    width: fit-content;
+    margin: 0px 100px;
+}
+
+
+.net{
+    color:  #999;
+    margin: 35px 100px;
+    font-family: "Roboto", sans-serif;
+}
+
+.net h4{
+    padding: 12px 0;
+}
+
+.net a{
+    color: rgb(102, 102, 245);
+}
